@@ -1,10 +1,11 @@
-#The total number of votes cast
-#A complete list of candidates who received votes
-#The percentage of votes each candidate won
-#The total number of votes each candidate won
-#The winner of the election based on popular vote
+#1. The total number of votes cast
+#2. A complete list of candidates who received votes
+#3. The percentage of votes each candidate won
+#4. The total number of votes each candidate won
+#5. The winner of the election based on popular vote
+    # 2-4 will be zipped lists using zip function
 
-#Modules
+#Import modules
 import os
 import csv
 
@@ -20,5 +21,3 @@ with open(csvpath) as csvfile:
     csv_header = next(csvreader)
     print(f"CSV Header: {csv_header}")
 
-    for row in csvreader:
-        print(row)

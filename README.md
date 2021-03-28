@@ -5,7 +5,7 @@ PyBank
 ------
 
 
-For the PyBank challenge, we were provided with the budget.csv file containing a companies finanical records to analyze. The dataset included two columns: Date and Profit/Losses. I analyzed the data using Python code to obtain the following.
+For the PyBank challenge, we were provided with the budget.csv file containing a companies finanical records to analyze. The dataset included two columns: Date and Profit/Losses. I analyzed the data using Python to obtain the following.
 
 	*The total number of months included in the dataset
 	*Total "Profit/Losses" over the entire period included in the dataset

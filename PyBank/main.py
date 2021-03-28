@@ -2,15 +2,15 @@
 import os
 import csv
 
-#csv path
+# Open csv file by defined path
 csvpath = os.path.join('Resources', 'budget_data.csv')
 
-#Create empty lists to iterate through specific rows for a given variable
+# Create empty lists to iterate through specific rows for a given variable
 total_months = []
 total_profit = []
 monthly_profit_change = []
 
-#Open/read csv file
+# Open and read csv file
 with open(csvpath, newline='') as csvfile:
 
 #   Create csvreader variable to store contents of budget.csv file
@@ -23,6 +23,7 @@ with open(csvpath, newline='') as csvfile:
     for row in csvreader:
 
 #       Split date to get month only separated from year
+#       Append data from csv to defined variables
         total_months.append(row[0])
         total_profit.append(int(row[1]))
 

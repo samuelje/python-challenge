@@ -1,10 +1,3 @@
-#1. The total number of votes cast
-#2. A complete list of candidates who received votes
-#3. The percentage of votes each candidate won
-#4. The total number of votes each candidate won
-#5. The winner of the election based on popular vote
-    # 2-4 will be zipped lists using zip function
-
 #Import modules
 import os
 import csv
@@ -16,10 +9,10 @@ Correy_votes = 0
 Li_votes = 0
 OTooley_votes = 0
 
-# Open CSV and read CSV
+# Open csv file by defined path
 csvpath = os.path.join('Resources', 'election_data.csv')
 
-#Open and read csv file
+# Open and read csv file
 with open(csvpath) as csvfile:
 
 #   Create csvreader variable to store contents of election_data.csv file    
@@ -32,9 +25,11 @@ with open(csvpath) as csvfile:
     for row in csvreader:
 
 #       Count the unique voter IDs and store in variable called total_votes
+#       Using += operator to add all total_votes together
         total_votes +=1
 
 #       if statements to compile all votes mathching a candidate and adding them to cadidate's variable
+#       Using += operator to add together each object of if/elif statement
         if row[2] == "Khan":
             Khan_votes +=1
         elif row[2] == "Correy":
@@ -59,7 +54,7 @@ Correy_percent = (Correy_votes/total_votes) *100
 Li_percent =(Li_votes/total_votes) *100
 OTooley_percent = (OTooley_votes/total_votes) *100
 
-#Final Statements
+# Final Statements
 print(f"Election Results")
 print(f"-------------------------")
 print(f"Total Votes: {total_votes}")
